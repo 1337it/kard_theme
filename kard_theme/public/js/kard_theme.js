@@ -56,7 +56,7 @@ $.extend(frappe.desktop, {
 					svgIcon.appendChild(useElement);
 					globalMenuSpan.appendChild(svgIcon);
 
-					globalMenuSpan.addEventListener('click', function() {
+					globalMenuSpan.addEventListener('load', function() {
 						openSidebar();
 					});
 				}
