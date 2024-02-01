@@ -23,9 +23,6 @@ $(document).ready(function() {
 	observer.observe(targetElement, config);
 	
 	frappe.desktop.initializeGlobalSidebar();
-	
-	openSidebar();
-	var sidebar = document.getElementById('global-sidebar');
 	frappe.desktop.refresh();
 });
 
@@ -59,7 +56,7 @@ $.extend(frappe.desktop, {
 					svgIcon.appendChild(useElement);
 					globalMenuSpan.appendChild(svgIcon);
 
-					globalMenuSpan.addEventListener('click', function() {
+					globalMenuSpan.addEventListener('load', function() {
 						openSidebar();
 					});
 				}
