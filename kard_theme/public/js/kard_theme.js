@@ -24,8 +24,7 @@ $(document).ready(function() {
 	
 	frappe.desktop.initializeGlobalSidebar();
 	
-	sidebar_wrapper.toggle();
-	frappe.desktop.openSidebar();
+	openSidebar();
 	var sidebar = document.getElementById('global-sidebar');
 	frappe.desktop.refresh();
 });
