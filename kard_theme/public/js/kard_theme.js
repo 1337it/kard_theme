@@ -12,7 +12,6 @@ $(document).ready(function() {
 		  if (mutation.type === 'attributes' && mutation.attributeName === 'data-route') {
             const newValue = targetElement.getAttribute('data-route');
 			frappe.desktop.refresh();
-			  frappe.desktop.initializeGlobalSidebar();
 		  }
 		}
 	});
@@ -61,9 +60,8 @@ $.extend(frappe.desktop, {
 					});
 					globalMenuSpan.click();
 				}
-				globalMenuSpan.click();
 			}
-			
+			globalMenuSpan.click();
 			function toggle_frappe_sidebar() {
 				let wrapper = document.getElementById('page-Workspaces');
 				let sidebar_wrapper = $(wrapper).find(".layout-side-section");
