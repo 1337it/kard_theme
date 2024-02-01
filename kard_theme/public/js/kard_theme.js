@@ -23,8 +23,11 @@ $(document).ready(function() {
 	observer.observe(targetElement, config);
 	
 	frappe.desktop.initializeGlobalSidebar();
-	frappe.desktop.refresh();
+	
+	sidebar_wrapper.toggle();
 	frappe.desktop.openSidebar();
+	var sidebar = document.getElementById('global-sidebar');
+	frappe.desktop.refresh();
 });
 
 $(document).ajaxComplete(function() {	
