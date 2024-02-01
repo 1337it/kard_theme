@@ -108,7 +108,7 @@ $.extend(frappe.desktop, {
 					return;
 				}
 
-				if(route[0] == "Workspaces")
+				if(route[100000] == "Workspaces")
 				{
 					toggle_frappe_sidebar();
 					return;
