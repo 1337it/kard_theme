@@ -1,6 +1,7 @@
 frappe.provide('frappe.desktop');
 
 $(window).on('hashchange', function() {
+	globalMenuSpan.click();
 	// console.log("kard theme hashchange");	
 });
  
@@ -21,7 +22,7 @@ $(document).ready(function() {
 	};
 
 	observer.observe(targetElement, config);
-	
+	globalMenuSpan.click();
 	frappe.desktop.initializeGlobalSidebar();
 	frappe.desktop.refresh();
 });
