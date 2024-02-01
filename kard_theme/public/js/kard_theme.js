@@ -12,6 +12,7 @@ $(document).ready(function() {
 		  if (mutation.type === 'attributes' && mutation.attributeName === 'data-route') {
             const newValue = targetElement.getAttribute('data-route');
 			frappe.desktop.refresh();
+			  frappe.desktop.initializeGlobalSidebar();
 		  }
 		}
 	});
