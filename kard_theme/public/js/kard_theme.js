@@ -1,8 +1,6 @@
 frappe.provide('frappe.desktop');
 
 $(window).on('hashchange', function() {
-	frappe.desktop.initializeGlobalSidebar();
-globalMenuSpan.click();
 	// console.log("kard theme hashchange");	
 });
  
@@ -23,6 +21,7 @@ $(document).ready(function() {
 	};
 
 	observer.observe(targetElement, config);
+	
 	frappe.desktop.initializeGlobalSidebar();
 	frappe.desktop.refresh();
 });
@@ -60,9 +59,9 @@ $.extend(frappe.desktop, {
 					globalMenuSpan.addEventListener('click', function() {
 						openSidebar();
 					});
-					globalMenuSpan.click();
 				}
 			}
+			
 			function toggle_frappe_sidebar() {
 				let wrapper = document.getElementById('page-Workspaces');
 				let sidebar_wrapper = $(wrapper).find(".layout-side-section");
@@ -109,7 +108,7 @@ $.extend(frappe.desktop, {
 					return;
 				}
 
-				if(route[100000] == "Workspaces")
+				if(route[0] == "Workspaces")
 				{
 					toggle_frappe_sidebar();
 					return;
@@ -1439,6 +1438,5 @@ $.extend(frappe.desktop, {
 	},
 
 });
-
 
 
