@@ -108,12 +108,6 @@ $.extend(frappe.desktop, {
 				if(!route){
 					return;
 				}
-
-				if(route[0] == "Workspaces")
-				{
-					toggle_frappe_sidebar();
-					return;
-				}
 					
 				let entries = frappe.boot.allowed_workspaces;
 				let sidebar = document.getElementById('global-sidebar');
