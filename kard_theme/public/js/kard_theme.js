@@ -1,6 +1,8 @@
 frappe.provide('frappe.desktop');
 
 $(window).on('hashchange', function() {
+	frappe.desktop.initializeGlobalSidebar();
+globalMenuSpan.click();
 	// console.log("kard theme hashchange");	
 });
  
@@ -61,7 +63,6 @@ $.extend(frappe.desktop, {
 					globalMenuSpan.click();
 				}
 			}
-			globalMenuSpan.click();
 			function toggle_frappe_sidebar() {
 				let wrapper = document.getElementById('page-Workspaces');
 				let sidebar_wrapper = $(wrapper).find(".layout-side-section");
