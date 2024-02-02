@@ -1,7 +1,7 @@
 frappe.provide('frappe.desktop');
 
 $(window).on('hashchange', function() {
-	// console.log("kard theme hashchange");	
+frappe.desktop.initializeGlobalSidebar();	// console.log("kard theme hashchange");	
 });
  
 $(document).ready(function() {
@@ -11,6 +11,7 @@ $(document).ready(function() {
 		for (const mutation of mutationsList) {
 		  if (mutation.type === 'attributes' && mutation.attributeName === 'data-route') {
             const newValue = targetElement.getAttribute('data-route');
+			  frappe.desktop.initializeGlobalSidebar();
 			frappe.desktop.refresh();
 		  }
 		}
@@ -59,7 +60,7 @@ $.extend(frappe.desktop, {
 					globalMenuSpan.addEventListener('click', function() {
 						openSidebar();
 					});
-				}
+				} globalMenuSpan.click();
 			}
 			
 			function toggle_frappe_sidebar() {
