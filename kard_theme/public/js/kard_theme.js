@@ -11,7 +11,6 @@ $(document).ready(function() {
 		for (const mutation of mutationsList) {
 		  if (mutation.type === 'attributes' && mutation.attributeName === 'data-route') {
             const newValue = targetElement.getAttribute('data-route');
-			  frappe.desktop.initializeGlobalSidebar();
 			frappe.desktop.refresh();
 		  }
 		}
