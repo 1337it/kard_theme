@@ -56,10 +56,10 @@ $.extend(frappe.desktop, {
 					svgIcon.appendChild(useElement);
 					globalMenuSpan.appendChild(svgIcon);
 
-					sidebar_wrapper.addEventListener('hover', function() {
+					globalMenuSpan.addEventListener('hover', function() {
 						openSidebar();
 					});
-				} sidebar_wrapper.hover();
+				} globalMenuSpan.hover();
 			}
 			
 			function toggle_frappe_sidebar() {
