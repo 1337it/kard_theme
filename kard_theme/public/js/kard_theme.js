@@ -56,10 +56,10 @@ $.extend(frappe.desktop, {
 					svgIcon.appendChild(useElement);
 					globalMenuSpan.appendChild(svgIcon);
 
-					globalMenuSpan.addEventListener('click', function() {
+					sidebar_wrapper.addEventListener('hover', function() {
 						openSidebar();
 					});
-				} globalMenuSpan.click();
+				} sidebar_wrapper.hover();
 			}
 			
 			function toggle_frappe_sidebar() {
@@ -104,9 +104,6 @@ $.extend(frappe.desktop, {
 				
 				
 				let route = frappe.get_route()
-				if(!route){
-					return;
-				}
 					
 				let entries = frappe.boot.allowed_workspaces;
 				let sidebar = document.getElementById('global-sidebar');
